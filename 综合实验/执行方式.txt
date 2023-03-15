@@ -1,0 +1,27 @@
+Task1：hadoop jar jar包路径 输入数据集路径 输出路径
+例子：hadoop jar Task1.jar /data/2022s/gamelog/dataset final/task1
+
+Task2：hadoop jar jar包路径 Task2(主类名) 输入数据集路径 临时结果路径 输出路径
+例子：hadoop jar /home/2021sg01/Task2-1.jar Task2 /data/2022s/gamelog/dataset /user/2021sg01/final/task2/temp /user/2021sg01/final/task2/output
+
+Task3：hadoop jar jar包路径 输入数据集路径 预测数据集路径 输出路径
+例子：hadoop jar ./Task3.jar hdfs://master001:9000/data/2022s/gamelog/dataset  hdfs://master001:9000/data/2022s/gamelog/predict ./output
+注意：Task3中间结果强行规定为 ./output1  ./output2  ./output3所以这三个目录一开始不应该存在
+
+Task4：hadoop jar jar包路径 输入数据集路径 Job1输出路径 Job2输出路径 DistributedCache文件路径(包含文件名) partition文件路径
+例子：hadoop jar Task4.jar /data/2022s/gamelog/dataset final/task4/temp1 final/task4/output final/task1/part-r-00000 final/task4/temp2
+
+Task5-1：hadoop jar jar包路径 输入数据集路径 Job1输出路径 Job2输出路径 DistributedCache文件路径(包含文件名) partition文件路径
+例子：hadoop jar Task5-1/Task5-1.jar input/dataset_example output1 output2 dis_cache/part-r-00000 partition
+
+Task5-2：hadoop jar jar包路径 AvgStats(主类名) 输入数据集路径 临时结果路径 输出路径
+例子：hadoop jar /home/2021sg01/AvgStats.jar AvgStats /data/2022s/gamelog/dataset /user/2021sg01/final/task5/AvgStats/temp1 /user/2021sg01/final/task5/AvgStats/output
+
+Task5-3：hadoop jar jar包路径 PeriodPreference(主类名) 输入数据集路径 临时结果路径 输出路径
+例子：hadoop jar /home/2021sg01/PeriodPreference.jar PeriodPreference /data/2022s/gamelog/dataset /user/2021sg01/final/task5/PeriodPreference/temp1 /user/2021sg01/final/task5/PeriodPreference/output
+
+Task5-4：hadoop jar jar包路径 ShootPreference(主类名) 输入数据集路径 临时结果路径 输出路径
+hadoop jar /home/2021sg01/ShootPreference.jar ShootPreference /data/2022s/gamelog/dataset /user/2021sg01/final/task5/ShootPreference/temp1 /user/2021sg01/final/task5/ShootPreference/output
+
+Task5-5：hadoop jar jar包路径 FinalPreference(主类名) 输入数据集路径 临时结果路径 输出路径
+例子：hadoop jar /home/2021sg01/FinalPreference.jar FinalPreference /data/2022s/gamelog/dataset /user/2021sg01/final/task5/FinalPreference/temp1 /user/2021sg01/final/task5/FinalPreference/output
